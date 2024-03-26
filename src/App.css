@@ -1,3 +1,211 @@
+/* --------------------------------------------- */
+/* ------------------- GENERAL ----------------- */
+/* --------------------------------------------- */
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f5f5;
+  font-family: -apple-system, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.loadingMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.white-bg {
+  background-color: #ffffff;
+}
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+/* --------------------------------------------- */
+/* ------------------- HEADER ------------------ */
+/* --------------------------------------------- */
+
+header {
+  border-bottom: 2px #e9ebeb solid;
+  height: 60px;
+  padding: 20px;
+}
+header div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
+}
+header div > img {
+  width: 100px;
+}
+
+/* --------------------------------------------- */
+/* -------------------- MAIN ------------------- */
+/* --------------------------------------------- */
+
+.restaurantInfo {
+  display: flex;
+  flex-direction: row;
+  max-width: 1190px;
+  width: 95vw;
+  margin: 0 auto;
+  padding: 25px 0;
+  gap: 30px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+.restaurantInfo p:first-of-type {
+  font-size: 19px;
+  color: #868a8a;
+  line-height: 30px;
+  text-justify: auto;
+}
+.restaurantInfo div > img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.allContent-restaurant {
+  display: flex;
+  position: relative;
+}
+
+/* -------------------- Meal ------------------- */
+.all-meal {
+  width: 70%;
+}
+
+.display-meal {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.meal-column {
+  min-width: 250px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  width: 50%;
+}
+
+.meal-item:hover {
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+  cursor: pointer;
+}
+
+.meal-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  height: 150px;
+}
+
+.meal-desc {
+  flex: 1;
+}
+
+.meal-item-desc > p {
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+.meal-picture {
+  height: 130px;
+  overflow: hidden;
+  width: 130px;
+}
+.meal-column p {
+  font-size: 14px;
+  color: #808484;
+}
+.priceStar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+span.price {
+  color: #808484;
+  font-size: 17px;
+  font-family: -apple-system, sans-serif;
+  font-size: 17px;
+}
+
+.starPop > i {
+  font-size: 17px;
+}
+.starPop {
+  display: flex;
+  gap: 5px;
+  font-family: -apple-system, sans-serif;
+  font-size: 12px;
+  align-items: center;
+  font-weight: 800;
+  color: #ff8001;
+  line-height: 10px;
+}
+.meal-column img {
+  object-fit: cover;
+  border-radius: 5px;
+  height: 130px;
+  width: 130px;
+}
+
+/* -------------------- Basket ------------------- */
+.basket {
+  margin: 20px 0px;
+  width: 349px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 22px 24px 0 rgba(46, 51, 51, 0.07);
+  position: sticky;
+  top: 0;
+}
+
+.submit-basket {
+  width: 100%;
+}
+.basket div > input {
+  width: 90%;
+  margin: 5%;
+  height: 50px;
+  border: none;
+  background-color: #bac3c3;
+  border-radius: 5px;
+}
+
+.content-basket {
+  width: 90%;
+  margin: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
