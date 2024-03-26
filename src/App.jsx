@@ -10,6 +10,7 @@ function App() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [basket, setBasket] = useState([]);
+  const [quantity, setQuantity] = useState([]);
 
   /*  Première utilisation du useEffect.
     // Fonction de fetchData
@@ -54,8 +55,20 @@ function App() {
       </div>
       <div className="container gray-bg">
         <div className="allContent-restaurant">
-          <Meals data={data} basket={basket} setBasket={setBasket} />
-          <Basket basket={basket} setBasket={setBasket} data={data} />
+          <Meals
+            data={data}
+            basket={basket}
+            setBasket={setBasket}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
+          <Basket
+            basket={basket}
+            setBasket={setBasket}
+            data={data}
+            quantity={quantity}
+            setQuantity={setQuantity}
+          />
         </div>
       </div>
     </>

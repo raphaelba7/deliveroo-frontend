@@ -1,11 +1,9 @@
-function Meals({ data, basket, setBasket }) {
+function Meals({ data, basket, setBasket, quantity, setQuantity }) {
   //console.log(data);
   const categories = data.meta.categories;
   //console.log(categories);
   const items = data.items;
   //console.log(items);
-
-  const newBasket = [...basket];
 
   return (
     <>
@@ -22,8 +20,14 @@ function Meals({ data, basket, setBasket }) {
                         <div
                           className="meal-column"
                           onClick={() => {
-                            newBasket[index] = elemItem.id;
+                            const newBasket = [...basket];
+                            const newQuantity = [...quantity];
+                            newBasket.push(elemItem);
+                            newQuantity[index] = quantity[index] + 1;
+                            console.log(index);
+                            console.log(newQuantity);
                             setBasket(newBasket);
+                            setQuantity(newQuantity);
                           }}
                         >
                           <div className="meal-item">
